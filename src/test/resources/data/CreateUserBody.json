@@ -1,0 +1,18 @@
+{
+  "address": "Hello World",
+  "country": "United States",
+  "dob": "06/14/1990",
+  "emailAddress": "TestAutomation10@Hello.com",
+  "firstName": "Test",
+  "gender": "M",
+  "homePhone": "9863548734",
+  "lastName": "Automation",
+  "locality": "Local",
+  "mobilePhone": "74957354456",
+  "password": "Test@123",
+  "postalCode": "43545",
+  "region": "norigion",
+  "ssn": "945634023",
+  "title": "Mr.",
+  "workPhone": "786543456"
+}
