@@ -17,6 +17,7 @@ public class DatabaseUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        //Just for Git
     }
 
     public static ResultSet executeQuery(String query) {
