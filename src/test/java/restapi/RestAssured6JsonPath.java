@@ -22,25 +22,39 @@ public class RestAssured6JsonPath {
 
         Response getUserResponse = given()
                 .header("Authorization","Bearer "+ authToken)
-                .pathParam("id", 125)
+                .pathParam("id", 4532)
                 .when()
                 .get("user/{id}");
 
         JsonPath userResponseJsonPath = getUserResponse.jsonPath();
+
+        getUserResponse.prettyPrint();
+
         int actualId = userResponseJsonPath.getInt("id");
         System.out.println(actualId);
-
         String actualUsername = userResponseJsonPath.getString("username");
         System.out.println(actualUsername);
 
         boolean actualEnabled = userResponseJsonPath.getBoolean("enabled");
-        System.out.println(actualEnabled);
-
         boolean actualAccountNonExpired = userResponseJsonPath.getBoolean("accountNonExpired");
-        System.out.println(actualAccountNonExpired);
-
+        boolean actualAccountNonLocked = userResponseJsonPath.getBoolean("accountNonLocked");
         boolean actualCredentialsNonExpired = userResponseJsonPath.getBoolean("credentialsNonExpired");
+
+        System.out.println(actualEnabled);
+        System.out.println(actualAccountNonExpired);
+        System.out.println(actualAccountNonLocked);
         System.out.println(actualCredentialsNonExpired);
 
+        int userProfileId = userResponseJsonPath.getInt("userProfile.id");
+        System.out.println(userProfileId);
+
+        String firstName = userResponseJsonPath.getString("userProfile.firstName");
+        System.out.println(firstName);
+
+        char gender = userResponseJsonPath.getChar("userProfile.gender");
+        System.out.println(gender);
+
+        String dob = userResponseJsonPath.getString("userProfile.dob");
+        System.out.println(dob);
     }
 }
