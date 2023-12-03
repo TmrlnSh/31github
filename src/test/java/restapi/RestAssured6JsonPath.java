@@ -17,6 +17,7 @@ public class RestAssured6JsonPath {
                 .when()
                 .post("/auth");
        JsonPath authResponseJsonPath = authRequestResponse.jsonPath();
+       authResponseJsonPath.prettyPrint();
        String authToken = authResponseJsonPath.getString( "authToken");
         System.out.println(authToken);
 
