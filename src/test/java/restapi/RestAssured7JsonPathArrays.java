@@ -39,7 +39,7 @@ public class RestAssured7JsonPathArrays {
         int thirdAccountNumber = userAccountsJsonPath.getInt("[2].accountNumber");
         System.out.println(thirdAccountNumber);
 
-
+        //lksafbjdv;kcsakdojfiahusldkvjid
 
     }
 }
