@@ -9,19 +9,19 @@ import io.restassured.RestAssured;
 
 public class Hooks {
 
-    @Before("@ui")
+    @Before
     public void setUp() {
         ConfigReader.initProperties();
         DriverUtils.createDriver();
         DatabaseUtils.initDatabase();
     }
 
-    @After("@ui")
+    @After
     public void cleanUp() {
         DriverUtils.getDriver().quit();
     }
 
-    @Before("@api")
+    @Before
     public void setUpAPI(){
         ConfigReader.initProperties();
         RestAssured.baseURI = ConfigReader.getProperty("api.url");
