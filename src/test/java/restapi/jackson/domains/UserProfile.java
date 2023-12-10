@@ -16,7 +16,7 @@ public class UserProfile {
     private String address;
     private String locality;
     private String region;
-    private int postalCode;
+    private String postalCode;
     private String country;
 
     public int getId() {
@@ -139,11 +139,11 @@ public class UserProfile {
         this.region = region;
     }
 
-    public int getPostalCode() {
+    public String getPostalCode() {
         return postalCode;
     }
 
-    public void setPostalCode(int postalCode) {
+    public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
 
