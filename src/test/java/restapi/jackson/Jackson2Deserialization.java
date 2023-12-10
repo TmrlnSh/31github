@@ -56,5 +56,7 @@ public class Jackson2Deserialization {
         System.out.println(userResponse.getUserProfile().getRegion());
         System.out.println(userResponse.getUserProfile().getPostalCode());
         System.out.println(userResponse.getUserProfile().getCountry());
+
+        //just for check
     }
 }
